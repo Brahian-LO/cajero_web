@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Iniciar Sesión</title>
 </head>
 <body>
+    <h2>🔐 Ingreso al Cajero</h2>
+    {% if messages %}
+        {% for message in messages %}
+            <p style="color:red;">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
     <form method="post">
         {% csrf_token %}
         <label>PIN:</label>
         <input type="number" name="pin" required>
         <button type="submit">Entrar</button>
-    </form>    
+    </form>
 </body>
 </html>
-
-
-

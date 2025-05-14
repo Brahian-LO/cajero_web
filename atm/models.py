@@ -8,13 +8,9 @@ class CajeroUserManager(BaseUserManager):
         user.save()
         return user
 
-class CajeroUser(AbstractBaseUser):
+class CajeroUser(models.Model):
     pin = models.PositiveIntegerField(unique=True)
     saldo = models.FloatField(default=0)
-
-    USERNAME_FIELD = 'pin'
-
-    objects = CajeroUserManager()
 
     def __str__(self):
         return f"Usuario {self.pin}"

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'atm',
 ]
 
 MIDDLEWARE = [
@@ -77,7 +78,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'cajero_web',
         'USER': 'cajero_user',
-        'PASSWORD': 'tu_contraseña_segura',
+        'PASSWORD': '1995',
         'HOST': 'localhost',
         'PORT': '5432',
     }
